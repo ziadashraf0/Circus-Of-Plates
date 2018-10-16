@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PlateShape:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PlateShape_jar</output-path>
+    <root id="archive" name="PlateShape.jar">
+      <element id="module-output" name="project3" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Sample/lib/engine_v3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

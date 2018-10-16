@@ -1,0 +1,15 @@
+ for(int i=0; i<10; i++)
+            Plate_list.add(new PlateObject((int)(Math.random() * screen_Width), -1 * (int)(Math.random() * screen_height), "/plate.png"));
+
+
+ for(GameObject m : Plate_list){
+            m.setY((m.getY() + 1));
+            if(m.getY()==getHeight()){
+                // reuse the star in another position
+                m.setY(-1 * (int)(Math.random() * getHeight()));
+                m.setX((int)(Math.random() * getWidth()));
+            }
+            m.setX(m.getX() + (Math.random() > 0.5 ? 1 : -1));
+            if(!timeout & intersect(m, spaceShip))
+                score = Math.max(0, score-10);	// lose score
+        }
